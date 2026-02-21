@@ -1,11 +1,25 @@
-Esse foi um projeto apresentado em sala de aula na matéria de Análise de Sinais e Sistemas.
+# Projeto: Reconstrução de Imagem via Transformada de Fourier
 
-O projeto consiste em uma reconstrução de uma imagem utilizando os cálculos presentes na transformada de Fourrier, no qual após o processamento do mesmo, a imagem se torna mais nítida e com menas interferências presentes. Os passos são os seguintes:
-1 - Primeiramente a imagem é carregada e é convertida para tods de cinza
-2 - Realiza o pré processamento aplicando a transformada rápida de Fourrier
-3 - Realiza o deslocamento de quadrantes utilizando a biblioteca FFT Shift em Python
-4 - Realiza a centralização com operações utilizando o domínio da frequência
-5 - Filtragem é aplicada promovendo o deslocamento inverso dos quadrantes da imagem processada, utilizando a função Inverse Shift em Python
-6 - Após todo o processamento aplica a transformada inversa de Fourrier para que a imagem consiga ser transformada inversamente até obter o módulo com a sua devida normalização
+Este projeto foi desenvolvido e apresentado como parte da disciplina de **Análise de Sinais e Sistemas**.
 
-Após todo esse processo a nova imagem é baixada e junto a ele, um novo png é instalado na mesma pasta do arquivo no qual realiza um comparativo entre as imagens pré processadas, com pós processadas.
+## 📝 Descrição do Projeto
+O objetivo principal é a reconstrução e melhoria de imagens utilizando conceitos da **Transformada de Fourier**. Através do processamento no domínio da frequência, o algoritmo consegue tornar a imagem mais nítida e reduzir interferências (ruídos) presentes no arquivo original.
+
+## ⚙️ Fluxo de Processamento
+O algoritmo segue as etapas abaixo para o processamento do sinal visual:
+
+1. **Conversão de Escala:** A imagem original é carregada e convertida para tons de cinza.
+2. **Domínio da Frequência:** Aplicação da Transformada Rápida de Fourier (**FFT**).
+3. **Deslocamento de Quadrantes:** Utilização da biblioteca `fftshift` (Python) para organizar os componentes de frequência.
+4. **Centralização:** Operações matemáticas realizadas diretamente no domínio da frequência para focar nos componentes principais.
+5. **Filtragem e Inversão:** - Aplicação de filtros para redução de ruído.
+   - Realização do deslocamento inverso utilizando a função `ifftshift` (Inverse Shift).
+6. **Reconstrução:** Aplicação da Transformada Inversa de Fourier (**IFFT**) para retornar ao domínio espacial, obtendo o módulo e realizando a devida normalização da imagem.
+
+## 📊 Resultados
+Ao final do processo, o algoritmo:
+* Gera e baixa a nova imagem processada.
+* Salva automaticamente um arquivo `.png` comparativo na pasta do projeto, facilitando a visualização das diferenças entre a imagem **Pré-processada** e a **Pós-processada**.
+
+---
+*Desenvolvido para fins acadêmicos.*
